@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Car Washing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./icons/car_washing_32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Seccion 1: Inicio -->
+    <section id="seccion1">
+
+        <!-- Navbar & DropDown -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">Campus Car Washing</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clientes">Gestion de clientes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Gestion de Servicios</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#compra">Compra del servicio</a>
+                            <a class="dropdown-item" href="#fidelizacion">Sistema de fidelizacion</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- Video de Fondo -->
+        <div id="videoContenedor">
+            <video id="videoFondo" autoplay loop muted></video>
+            <div id="contenido">
+                <h1>Inicio</h1>
+                <p>
+                    Bienvenido a Campus Car Washing! <br>
+                    Lugar del autolavado con mejor calidad de servicios para tu coche. <br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Salto de linea en la seccion 2 -->
+    <div id="clientes" id="gestion" class="logo-seccion">
+        <h1>Gestión de Clientes</h1>
+    </div>
+
+    <!-- Seccion 2: Gestion de clientes -->
+    <section id="seccion2">
+        <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Itaque, provident culpa alias, sequi magnam ab expedita fugiat nam <br>
+            eaque, debitis autem hic nisi illo totam perferendis impedit eos in velit.
+        </p>
+        <button class="scrollToTop" onclick="scrollToTop()">Subir</button>
+        <!-- Formulario de registro de clientes -->
+        <div class="contenedor">
+            <h2>Gestión de Clientes</h2>
+            <form id="registroClienteForm">
+                <div class="form-group">
+                    <label for="numeroIdentificacion">Número de identificación:</label>
+                    <input type="text" id="numeroIdentificacion" placeholder="Número de identificación" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" placeholder="Nombres" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" placeholder="Apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="placaAuto">Placa Auto:</label>
+                    <input type="text" id="placaAuto" placeholder="Placa Auto" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" id="tipo" placeholder="(Automóvil, Camioneta, Autobús, Camión de Carga)"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="correoElectronico">Correo electrónico:</label>
+                    <input type="email" id="correoElectronico" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" placeholder="Teléfono" required>
+                </div>
+                <button class="registrar" type="submit">Registrar</button>
+            </form>
+        </div>
+        <!-- Buscador de clientes -->
+        <input type="text" id="buscador" placeholder="Buscar por nombre, apellidos o documento de identidad">
+
+        <!-- Tabla de clientes -->
+        <div id="tablaClientes"></div>
+    </section>
+
+
+    <!-- Salto de linea en la seccion 3 -->
+    <div id="servicios" class="logo-seccion">
+        <h1>Gestión de Servicios</h1>
+    </div>
+
+    <!-- Seccion 3: Gestión de Servicios -->
+    <section id="seccion3">
+        <p class="p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+            Harum fugiat cum in fugit ex, rem laudantium et culpa aliquid, <br>
+            odio eos? Totam veniam laudantium nihil, <br>
+            omnis recusandae est distinctio veritatis.
+        </p>
+        <div class="servicio-form">
+            <form id="agregarServicioForm">
+                <div>
+                    <label for="nombreServicio">Nombre del Servicio:</label>
+                    <input type="text" id="nombreServicio" placeholder="Ingrese el nombre del servicio" required>
+                </div>
+                <div>
+                    <label for="valorServicio">Valor del Servicio:</label>
+                    <input type="number" id="valorServicio" placeholder="Ingrese el valor del servicio" required>
+                </div>
+                <div>
+                    <label for="descripcion">Descripcion:</label>
+                    <input type="text" id="descripcion" placeholder="Describa el servicio" required>
+                </div>
+                <div>
+                    <label for="puntosFidelizacion">Puntos para Fidelización:</label>
+                    <input type="number" id="puntosFidelizacion" placeholder="Ingrese los puntos de fidelización"
+                        required>
+                </div>
+                <button class="agregar" type="submit">Agregar</button>
+            </form>
+        </div>
+        <div id="tablaServicio">
+            <h2>Listado de Servicios</h2>
+            <table id="listaServicios">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del Servicio</th>
+                        <th>Valor del Servicio</th>
+                        <th>Descripcion del Servicio</th>
+                        <th>Puntos para Fidelización</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los elementos de la lista se agregarán dinámicamente aquí -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Salto de linea en la seccion 4 -->
+    <div id="compra" id="servicios" class="logo-seccion">
+        <h1>Compra de Servicios</h1>
+    </div>
+
+    <!-- Seccion 4: Compra de Servicios -->
+    <section id="seccion4">
+        <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Odio similique delectus doloribus deserunt debitis ea alias <br>
+            vero sapiente nihil dignissimos, voluptates architecto nemo <br>
+            quis quidem blanditiis ad explicabo soluta. Porro.
+        </p>
+        <div class="container">
+            <form id="compra-form">
+                <div class="form-group">
+                    <label class="label" for="cliente">Cliente:</label>
+                    <select class="form-control" id="cliente" required></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Servicio:</label>
+                    <select class="form-control" id="servicio" required></select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Comprar</button>
+            </form>
+        </div>
+        <div class="container">
+            <h3>Resumen de la Compra</h3>
+            <div id="compra-resumen" class="resumen"></div>
+        </div>
+    </section>
+
+    <!-- Salto de linea en la seccion 5 -->
+    <div id="fidelizacion" class="logo-seccion">
+        <h1>Sistema de Fidelizacion</h1>
+    </div>
+
+    <section id="seccion5">
+        <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Ducimus non facere pariatur aut recusandae quisquam tempore <br>
+            molestias illo! Vitae debitis fugit, repellat placeat cumque <br>
+            ex corrupti quidem sint velit ipsum.
+        </p>
+        <table id="fidelizacion-table">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Puntos de Fidelizacion</th>
+                </tr>
+            </thead>
+            <tbody id="fidelizacion-body">
+                <!-- Aqui se agregara automaticamente las filas de la tabla -->
+            </tbody>
+        </table>
+    </section>
+
+    <div class="footer">
+        <p>Copyright &copy; All Right Reserved | Designed <span class="span">By Campus Car Washing</span> 2023
+        </p>
+    </div>
+
+    <!-- Script principal (JavaScript) -->
+    <script src="script.js"></script>
+
+
+    <!-- Scripts Especiales -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

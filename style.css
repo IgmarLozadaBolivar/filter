@@ -1,0 +1,567 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Macondo&family=Merienda:wght@600&display=swap');
+
+/* Ajustes en General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cuerpo */
+body {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+/* Contenido Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #00C4FF;
+}
+
+#navbarNav {
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00C4FF;
+}
+
+.navbar-toggler {
+    border: none;
+    color: #fff;
+}
+
+/* Estilos del Dropdown */
+.dropdown-item {
+    color: #333;
+}
+
+.dropdown-item:hover {
+    color: #00C4FF;
+}
+
+/* Estilos del video de fondo */
+#videoContenedor {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#videoFondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenido */
+#contenido {
+    top: 50%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.p {
+    margin-top: 5%;
+}
+
+#contenido h1 {
+    padding-top: -10px;
+}
+
+/* Estilos adicionales para el contenedor */
+.contenedor {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor h1 {
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilos para el formulario */
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+/* Estilos para el grupo de formulario */
+.form-group {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Estilos para las etiquetas del formulario */
+.form-group label {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+/* Estilos para los campos de entrada del formulario */
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Estilos para los botones de registrar y agregar de los formularios */
+.registrar,
+.agregar {
+    width: 97%;
+    padding: 8px;
+    background-color: #38E54D;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 15px;
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+
+.registrar:hover {
+    color: white;
+    transform: scale(1.1);
+    background: transparent;
+    text-shadow: 1px 1px 6px #fff;
+    box-shadow: inset 0 0 20px #38E54D, 0 0 20px #38E54D;
+}
+
+.agregar:hover {
+    color: #fff;
+    transform: scale(1.1);
+    background: transparent;
+    text-shadow: 1px 1px 6px #38E54D;
+    box-shadow: inset 0 0 20px #38E54D, 0 0 20px #38E54D;
+}
+
+/* Estilos para el buscador de clientes */
+#buscador {
+    width: 100%;
+    padding: 8px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+#tablaClientes,
+#tablaServicio,
+#fidelizacion-table {
+    margin-top: 15px;
+}
+
+.logo-seccion {
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border: none;
+    padding: 12px 0px 8px 0px;
+}
+
+.logo-seccion h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="date"]::placeholder,
+input[type="number"]::placeholder,
+input[type="tel"]::placeholder {
+    color: #ccc;
+}
+
+#tablaClientes th,
+#tablaClientes td,
+#tablaServicio th,
+#tablaServicio td,
+#fidelizacion-table th,
+#fidelizacion-table td {
+    color: #333;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#fidelizacion-table td {
+    text-align: center;
+}
+
+#tablaClientes th,
+#tablaServicio th,
+#fidelizacion-table th,
+#fidelizacion-table td {
+    background-color: #333;
+    color: #fff;
+}
+
+#tablaClientes tr:nth-child(even),
+#tablaServicio tr:nth-child(even),
+#fidelizacion-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tablaClientes tr,
+#tablaServicio tr,
+#fidelizacion-table tr {
+    background-color: #ddd;
+}
+
+
+h1 {
+    margin-top: 0;
+}
+
+h1:hover {
+    color: #00C4FF;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+/* Estilos de la seccion de Gestion de Clientes */
+#seccion2 {
+    top: 0;
+    width: 100%;
+    height: 125vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)),
+        url(./img/car_washing_01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo de la seccion de Gestion de Servicios */
+#seccion3 {
+    width: 100%;
+    height: 125vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)), url(./img/car_washing_02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.servicio-form {
+    margin-bottom: 20px;
+}
+
+.servicio-form h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.servicio-form form {
+    display: grid;
+    grid-gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.servicio-form label {
+    font-weight: bold;
+}
+
+.servicio-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+/* .ruta-lista {
+    margin-bottom: 20px;
+}
+
+.ruta-lista h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+} */
+
+/* Estilos de la seccion de Compra de Servicios */
+#seccion4 {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)),
+        url(./img/car_washing_03.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.resumen p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.resumen p:last-child {
+    font-weight: bold;
+}
+
+select.form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+/* Estilos de la seccion de Sistema de Fidelizacion */
+#seccion5 {
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)),
+        url(./img/car_washing_04.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#seccion5 table {
+    border-collapse: collapse;
+}
+
+#seccion5 th,
+td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button {
+    font-size: 15px;
+    color: #333;
+    background: transparent;
+    border: 2px solid #FC2947;
+    border-radius: 30px;
+    transform: scale(1);
+    transition: transform 1s ease;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+button:hover {
+    color: #fff;
+    transform: scale(1.2);
+    background: transparent;
+    text-shadow: 1px 1px 6px #FC2947;
+    box-shadow: inset 0 0 20px #FC2947, 0 0 20px #FC2947;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    .logo-seccion h1 {
+        font-size: 1.5rem;
+    }
+    
+    .contenedor {
+        width: 100%;
+    }
+    
+    .contenedor h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .label {
+        font-size: 12px;
+        padding: 6px;
+    }
+    
+    .form-group label,
+    .form-group input,
+    .registrar,
+    #buscador {
+        font-size: 12px;
+        padding: 6px;
+    }
+    
+    .registrar:hover {
+        transform: scale(1);
+    }
+    
+    .servicio-form form {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"] {
+        width: 100%;
+    }
+
+    .registrar,
+    button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #buscador {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #tablaClientes {
+        margin-top: 10px;
+        overflow-x: auto;
+    }
+
+    #tablaServicio {
+        margin-top: 10px;
+        overflow-x: auto;
+    }
+
+    #fidelizacion-table {
+        margin-top: 10px;
+        overflow-x: auto;
+    }
+
+    .footer {
+        margin-top: 10px;
+        overflow-x: auto;
+    }
+
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 7vh;
+    background: #1B1919;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+.footer span {
+    color: #00C4FF;
+    border-color: #1B1919;
+    font-weight: bold;
+}
+
+.footer span:hover {
+    color: #fff;
+    border-color: #1B1919;
+    font-weight: bold;
+}
+
+.span {
+    cursor: pointer;
+}
